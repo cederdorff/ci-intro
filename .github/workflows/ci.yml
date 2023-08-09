@@ -13,3 +13,9 @@ jobs:
     steps:
       - name: Checkout Repository
         uses: actions/checkout@v2
+
+      - name: Print Commit Message
+        run: |
+          COMMIT_SHA=$(git rev-parse --short HEAD)
+          echo "Job triggered by commit $COMMIT_SHA"
+          echo "Hello, this is your custom message!"
