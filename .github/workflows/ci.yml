@@ -1,0 +1,15 @@
+name: Mainline CI
+
+on:
+  push:
+    branches:
+      - master
+      - main
+
+jobs:
+  mainline:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v2
